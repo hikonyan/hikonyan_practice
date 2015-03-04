@@ -7,6 +7,21 @@ char, int, long, float, double
 
 理解度チェック
 - char, int, long, float, doubleはそれぞれメモリ上で何バイト？(32bitマシンと64ビットマシンでそれぞれ違うので調べてみる。)
+		32bit 	64bit
+char	1byte	1byte
+int		2byte	2byte
+long	4byte	8byte
+float	4byte	4byte
+double 	12byte	16byte
+
 - signedとunsignedはなにが違う？
+	signedは符号付きでunsignedは符号なし
+	符号付きの場合、正数のみではなく負数も扱われる。
+	符号なしの場合符号ビットを数値として扱うため扱える数値の範囲が倍になる
+
 - オーバーフロー、アンダーフローとはなにか
+	オーバーフローは保持したメモリに対して計算結果が大幅になりすぎて表示できなくなる、書き換わる情報
+	アンダーフローは浮動小数点数が保持したメモリを超えた時に発生する
+
 - char a = 'a'; の変数aに+1してみるとどうなる？ char b = a + 1; 
+	普通に足し算が出来ました。
